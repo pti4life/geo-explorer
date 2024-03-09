@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
       <main className="container mt-10">
         <h1 className="sr-only">Country list page</h1>
-        <div className="flex gap-4 flex-wrap justify-between">
+        <div className="flex flex-wrap justify-between gap-4">
           <Search
             placeholder="Search for a country"
             className="max-w-[22rem]"

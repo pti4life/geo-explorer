@@ -26,9 +26,9 @@ export default function RootLayout({
       </Head>
       <body
         className={cn(
-          "min-h-screen bg-[hsl(0,_0%,_98%)] dark:bg-[hsl(207,_26%,_17%)] antialiased",
+          "min-h-screen bg-[hsl(0,_0%,_98%)] antialiased dark:bg-[hsl(207,_26%,_17%)]",
           fontSans.className,
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <ThemeProvider
