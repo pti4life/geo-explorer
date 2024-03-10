@@ -3,7 +3,6 @@ import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
-import Head from "next/head";
 
 const fontSans = Nunito_Sans({
   subsets: ["latin"],
@@ -21,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <link rel="icon" href="/favicon.png" />
-      </Head>
+      </head>
       <body
         className={cn(
           "min-h-screen bg-[hsl(0,_0%,_98%)] antialiased dark:bg-[hsl(207,_26%,_17%)]",
