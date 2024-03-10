@@ -32,7 +32,7 @@ export function CountryList(params: {
         >
           <Link href={`/country/${item.countryCode3}`}>
             <Image
-              className="w-full max-w-fit"
+              className="w-full"
               width={500}
               height={150}
               src={item.flagUrl}

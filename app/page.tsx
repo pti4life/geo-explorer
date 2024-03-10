@@ -22,6 +22,9 @@ export default function Home() {
   const [region, setRegion] = useState("empty");
   const [results, setResults] = useState([] as typeof data);
 
+  // select issue: https://github.com/radix-ui/primitives/issues/1658
+  const [selectOpen, setSelectOpen] = useState(false);
+
   const onFilter = () => {
     if (!data) {
       return;
@@ -58,7 +61,16 @@ export default function Home() {
               className="h-12 w-full pl-16"
             />
           </div>
-          <Select defaultValue={region} onValueChange={(val) => setRegion(val)}>
+          <Select
+            defaultValue={region}
+            onValueChange={(val) => setRegion(val)}
+            open={selectOpen}
+            onOpenChange={() => {
+              setTimeout(() => {
+                setSelectOpen(!selectOpen);
+              });
+            }}
+          >
             <SelectTrigger className="h-12 max-w-[12rem]">
               <SelectValue />
             </SelectTrigger>
